@@ -12,6 +12,9 @@ export const itemRouter = router({
         },
       });
     }),
+  getAll: publicProcedure.query(({ ctx }) => {
+    return ctx.prisma.shoppingItem.findMany();
+  }),
 });
 
 /*
